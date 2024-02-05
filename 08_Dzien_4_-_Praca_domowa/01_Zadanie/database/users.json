@@ -1,0 +1,12 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "John",
+      "surname": "Doe",
+      "age": 25,
+      "city": "Warsaw",
+      "gender": "male"
+    }
+  ]
+}
