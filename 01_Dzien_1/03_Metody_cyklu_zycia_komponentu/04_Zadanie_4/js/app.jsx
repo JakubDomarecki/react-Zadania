@@ -1,6 +1,6 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
-
+import Modal from "./Modal.jsx";
 const App = () => {
   return (
     <div>

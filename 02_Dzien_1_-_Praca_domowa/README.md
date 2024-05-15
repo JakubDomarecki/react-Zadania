@@ -26,7 +26,7 @@ Jest on napisany w sposób funkcyjny. Przepisz go na działającą klasę ES6.
 >
 > **Pamiętaj aby włączyć serwer deweloperski (`npm run dev`).**
 
-Stwórz komponent `AnotherColor`, który przechowuje kolor do wyświetlenia jako **stan lokalny**. Niech kolor będzie domyślnie nastawiony na "yellow".
+Stwórz komponent `TrafficLights`, który przechowuje kolor do wyświetlenia jako **stan lokalny**. Niech kolor będzie domyślnie nastawiony na "yellow".
 
 Komponent ma wyrenderować ten element `div` z tłem ustawionym na to ze stanu lokalnego.
 

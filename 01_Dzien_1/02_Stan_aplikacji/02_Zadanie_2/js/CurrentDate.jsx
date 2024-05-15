@@ -1,38 +1,34 @@
-// const CurrentDate = () => {
-//     state = {
-//         Date: 0,
-//     };
-//     const CurrentDate = () => {
-//         const date = new Date();
-//         console.log(date);
-//     };
-//
-//     return (
-//         <button onClick={CurrentDate}>Zaktualizuj datę</button>
-//     );
-// };
-// export default CurrentDate;
-
-
 import {Component} from "react";
 
 class CurrentDate extends Component {
     state = {
-        date: new Date(),
+        now: new Date(),
     };
-        CurrentDateFunc = () => {
-            console.log(new Date());
-            this.setState((prevState) => {
-                return {
-                    counter: prevState.date + 1,
-                };
-            });
+
+    formatDate = (now) => {
+        // formatDate jest czysta funkcja (pure function)
+        const hh = now.getHours();
+        const mm = now.getMinutes();
+        const ss = now.getSeconds();
+        const d = now.getDate();
+        const m = now.getMonth() + 1;
+        const y = now.getFullYear();
+
+        // Godziny:Minuty:Sekundy, Dzień/Miesiąc/Rok
+        return `${hh}:${mm}:${ss}, ${d}/${m}/${y}`;
     };
+    handleClick = () => this.setState({ now: new Date() });
+
         render() {
+            const { now } = this.state;
             return (
-                <button onClick={this.CurrentDateFunc}>Zaktualizuj datę</button>
+                <>
+                    <p>{this.formatDate(now)}</p>
+                    <button onClick={this.handleClick}>Zaktualizuj datę</button>
+                </>
             );
         }
 }
+
 export default CurrentDate;
 
