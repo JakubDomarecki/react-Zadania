@@ -9,14 +9,8 @@ class Modal extends Component {
     // LOGIC
     componentDidMount() {
         this.timerId = setTimeout(() => {
-            this.setState((state) => ({
-                modalOpen: true,
-            }));
-        }, 10 * 1000);
-    }
-
-    componentWillUnmount() {
-        clearTimeout(this.timerId);
+            this.setState({modalOpen: true});
+        }, 2 * 1000);
     }
 
     // UI
@@ -24,7 +18,9 @@ class Modal extends Component {
         const { heading } = this.props;
         const { modalOpen } = this.state;
 
-        return modalOpen ? <h2>{heading}</h2> : null;
+        return (
+            modalOpen ? <h2>{heading}</h2> : null
+        );
     }
 
 }

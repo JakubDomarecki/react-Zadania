@@ -6,7 +6,10 @@ import { createRoot } from 'react-dom/client';
 // }
 class UpperCaseText extends Component {
   render() {
-    return <h2>{this.props.text.toLocaleUpperCase()}</h2>;
+
+    const {text} = this.props;
+
+    return <h2>{text.toLocaleUpperCase()}</h2>;
   }
 }
 

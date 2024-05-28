@@ -5,12 +5,29 @@ class AnotherColor extends Component {
         color: 'yellow'
     };
 
+    // componentDidMount() {
+    //      this.intervalId = setInterval(() => {
+    //         this.setState((state) => ({
+    //             color: state.color === "yellow" ? "blue" : "yellow",
+    //         }));
+    //     }, 2 * 1000);
+    // }
+
+
     componentDidMount() {
-        const intervalId = setInterval(() => {
-            this.setState((state) => ({
-                color: state.color === "yellow" ? "blue" : "yellow",
-            }));
-        }, 2 * 1000);
+        this.intervalId = setTimeout(() => {
+            this.setState({color: 'blue'});
+        }, 1 * 1000);
+    }
+
+    // componentDidMount() {
+    //    this.intervalId = setInterval(() => {
+    //     this.setState((prevState => ({color: prevState.color === 'yellow' ? "blue" : "yellow"})));
+    //    }, 2 * 1000);
+    // }
+
+    componentWillUnmount() {
+        clearInterval(this.intervalId);
     }
 
     render() {

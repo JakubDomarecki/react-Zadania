@@ -6,11 +6,15 @@ class Box extends Component {
     };
 
     componentDidMount() {
-        setInterval(() => {
-            this.setState((state) => ({
-              color: state.color === "green" ? "red" : "green",
-            }));
+        this.intervalId = setInterval(() => {
+            this.setState((state) => ({color: state.color === "green" ? "red" : "green"}));
         }, 5 * 1000);
+    }
+
+
+
+    componentWillUnmount() {
+        clearInterval(this.intervalId);
     }
 
     render() {

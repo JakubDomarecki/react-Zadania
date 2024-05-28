@@ -3,8 +3,7 @@ import {useState} from "react";
 const Notes = () => {
     const [texareaValue, setTexareaValue] = useState("");
     const handleTextareaChange = (e) => {
-        const textareaText = e.target.value;
-        setTexareaValue(textareaText);
+        setTexareaValue(e.target.value);
     };
 
     const clearTextarea = () => {
@@ -17,7 +16,7 @@ const Notes = () => {
 
     return (
       <form onClick={stopForm}>
-          <textarea value={texareaValue} onChange={handleTextareaChange}></textarea>
+          <textarea value={texareaValue} onChange={handleTextareaChange}/>
           <button onClick={clearTextarea}>Wyczyść</button>
           <span>{texareaValue}</span>
       </form>

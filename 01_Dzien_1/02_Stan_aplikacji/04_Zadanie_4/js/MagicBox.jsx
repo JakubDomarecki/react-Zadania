@@ -12,6 +12,7 @@ class MagicBox extends Component {
 
     AddColor = () => this.setState({ color: RandomColor()});
     render() {
+        // const { color} = this.state;
         return (
           <div style={{ backgroundColor: this.state.color, width: '200px', height:'100px'}} onMouseOver={this.AddColor}></div>
         );

@@ -9,6 +9,7 @@ const Box = () => {
         }, 1000);
     }, []); // tylko onMount
 
+
     return (
         <div style={{ width: "100px", height: "100px", background: bgColor }} />
     );

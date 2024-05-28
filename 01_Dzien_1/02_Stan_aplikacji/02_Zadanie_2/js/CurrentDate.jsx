@@ -19,7 +19,7 @@ class CurrentDate extends Component {
     };
     handleClick = () => this.setState({ now: new Date() });
 
-        render() {
+    render() {
             const { now } = this.state;
             return (
                 <>

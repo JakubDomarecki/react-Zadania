@@ -45,7 +45,7 @@ const Stopwatch = () => {
             <button onClick={handleStop}>Stop</button>
             <button onClick={restartCouting}>Restart</button>
             <button onClick={handleStart}>Start</button>
-            <ul>{Laps.map((el, index) => <li key={index}>{el}</li>)}</ul>
+            <ul>{Laps.map((lap, index) => <li key={index}>{lap}</li>)}</ul>
         </>
     );
 

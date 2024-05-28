@@ -6,11 +6,19 @@ class TextTyper extends Component {
         letterIndex: 0,
     };
 
-    handleIncr = () =>
-        this.setState((state) => ({ letterIndex: state.letterIndex + 1 }));
+
+    // handleIncr = () =>
+    //     this.setState((state) => ({ letterIndex: state.letterIndex + 1 }));
+
+    handleIncr1 = () =>
+        this.setState((state) => {
+            return {
+                letterIndex: state.letterIndex + 1
+            };
+        });
 
     handleDecr = () =>
-        this.setState((state) => ({ letterIndex: state.letterIndex - 1 }));
+        this.setState((prevState) => ({ letterIndex: prevState.letterIndex - 1 }));
 
     render() {
         const { text, letterIndex } = this.state;
@@ -22,7 +30,7 @@ class TextTyper extends Component {
         return (
             <div>
                 <h1>{letters}</h1>
-                <button type="button" onClick={this.handleIncr}>
+                <button type="button" onClick={this.handleIncr1}>
                     +1
                 </button>
                 <button type="button" onClick={this.handleDecr}>

@@ -5,8 +5,7 @@ const AdultStuff = () => {
     const [inputValue, setInputValue] = useState("");
 
     const handleInputChange = (e) => {
-        const inputAge = e.target.value;
-        setInputValue(inputAge);
+        setInputValue(e.target.value);
     };
 
 

@@ -10,7 +10,7 @@ const SelectOrType = ({ items }) => {
     };
     const handleChange = (e) => {
         const value = e.target.value;
-        setSelectedItem(value);
+        setSelectedItem(e.target.value);
         if (value === 'Inne') {
             setShowCustomInput(true);
         } else {

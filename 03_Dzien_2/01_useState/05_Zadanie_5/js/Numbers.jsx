@@ -5,7 +5,7 @@ const Numbers = () => {
    const [numbersArray, setArray] = useState(INIT_NUMBERS);
 
    const DoArrayEven = () => {
-       setArray( INIT_NUMBERS.filter(even => even % 2 === 0));
+       setArray(INIT_NUMBERS.filter(even => even % 2 === 0));
    };
     const ShowWholeArray = () => {
         setArray(INIT_NUMBERS);

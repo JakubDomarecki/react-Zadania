@@ -8,6 +8,9 @@ const Counter = () => {
     const decr = () => setCounter((state) => state - 1);
     const reset = () => setCounter(INIT_COUNTER);
 
+
+
+
     return (
         <>
             <h2>{Counter}</h2>

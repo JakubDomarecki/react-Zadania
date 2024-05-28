@@ -6,10 +6,11 @@ const PropsToState = ({text}) => {
 
     useEffect(() => {
        const intervalId = setInterval(() => {
-           setTxt(txt + '!');
+           setTxt(prevState => prevState + '!');
+           // setTxt(txt + '!');
        }, 1000);
        return () => clearInterval(intervalId);
-    });
+    },[]);
 
 
     return (

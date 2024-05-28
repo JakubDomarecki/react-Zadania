@@ -4,7 +4,7 @@ const BookInfo = ({ isbn }) => {
     const [book, setBook] = useState(null);
 
     useEffect(() => {
-        fetch(`https://www.googleapis.com/books/v1/volumes?q=isbn:${isbn}`)
+        fetch(`https://api.api-ninjas.com/v1/exercises?muscle=chest`)
             .then((resp) => {
                 if (resp.ok) {
                     return resp.json();
