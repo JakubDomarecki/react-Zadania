@@ -2,7 +2,7 @@ import react, {useState} from "react";
 
 const INIT_COUNTER =  10;
 const Counter = () => {
-    const [Counter, setCounter] = useState(10);
+    const [Counter, setCounter] = useState(INIT_COUNTER);
 
     const incr = () => setCounter((state) => state + 1);
     const decr = () => setCounter((state) => state - 1);

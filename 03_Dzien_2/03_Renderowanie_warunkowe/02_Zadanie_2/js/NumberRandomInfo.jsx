@@ -9,7 +9,7 @@ const NumberRandomInfo = () => {
 
        },1000);
         return () => clearInterval(intervalId);
-    },[]);
+    },[RandomNumber]);
 
 
     return (
